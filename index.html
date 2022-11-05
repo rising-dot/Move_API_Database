@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="RateStyle.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+</head>
+
+<header>
+  <nav id="nav">
+
+ 		
+ 		<div id="main-left-menu">
+		 		<div id="main-logo-container">
+				    <a href="#" id="logo">Logo</a>
+
+				    <div id="navbar" class="toggle">
+						<span class="bar-line"></span>
+						<span class="bar-line"></span>
+						<span class="bar-line"></span>
+					</div>
+				</div>
+
+				<div id="left-menu" class="show-toggle active"> 
+				    <a href="#" id="movies-menu-Btn" class="menu-style">Movies</a>
+				    <a href="#" id="tvShow-menu-Btn" class="menu-style">TV Show</a>
+				    <a href="#" id="profile-menu-Btn" class="menu-style">Profile</a>
+		   		</div>
+		</div>
+
+        <div id="right-menu" class="show-toggle active"> 
+        	<p id="login-username"></p>
+
+        	<div>
+        	<a href="#" id="sign-up-menu-Btn" class="authentication menu-style">Sign Up</a>
+            <a href="#" id="login-menu-Btn" class="authentication menu-style">Login</a>
+            </div>
+            <a href="#" id="sign-out-menu-Btn" class="authentication menu-style">Login Out</a>
+        </div>
+
+  </nav>
+</header>
+
+
+
+
+
+<body>
+	<div id="main-login-container">
+
+		  <div id="login-input-container">
+	   		  <input class="login-input-style" id="username" type="text" placeholder="username" value="rising">
+			  <input class="login-input-style" id="email" type="text" placeholder="email" value="">
+			  <input class="login-input-style" id="password" type="text" placeholder="Password" value="">
+		  </div>
+
+		  <div id="submit-container-Btn">
+			  <button class="submit-style-Btn" id="login-Btn">Log in</button>
+			  <button class="submit-style-Btn" id="sign-up-Btn">Sign up</button>
+
+		  </div>
+	</div> 
+
+	<div id="intro-cover-page" style="background-image: url(cover.png); background-position: center; background-size: cover; background-repeat: no-repeat">
+		<div id="intro-text">
+			<h1>Star free recommendations for movie lovers</h1>
+			<p>Rate your favorite movies or series by words</p>
+		</div>
+	</div>
+
+
+
+
+<div id="main-container">
+
+
+
+
+	<div id="main-search-container">
+		<button id="search-Btn" class="search-movies-Btn">Search</button>
+		<input id="search-input-style" type="text" placeholder="search for a movie">
+
+
+	</div>
+
+	<div id="main-display-search-container">
+		<h1 id="search-results"></h1>
+		<div id="display-search"></div>
+	</div>
+
+
+
+
+<div id="main-sub-container">
+
+		<div class="next-page-container">
+			<button class="next-page-left-Btn next_page"><<<<</button>
+			<span class="next-page-Btn top-page-1">1</span>
+			<span class="next-page-Btn top-page-2">2</span>
+			<span class="next-page-Btn top-page-3">3</span>
+			<span class="next-page-Btn top-page-4">4</span>
+			<button class="next-page-right-Btn next_page">>>>></button>
+		</div>
+
+
+
+
+	 	<div id="main-profile-container">
+		 	<div id="movies-or-series-container-Btn">
+		 		<button id="show-movies">Your Movies Ratings</button>
+		 		<button id="show-series">Your Series Ratings</button>
+		 	</div>
+
+
+			<div id="page-container">
+	 			<div id="the-compare-result"></div>
+
+		 			
+		 		<div id="profile-movies-container"></div>
+		 		<div id="profile-tvShow-container"></div>
+		  	</div>
+
+	 	</div>
+
+
+
+
+	 	<div id="page-tvShow"></div>
+		<div id="page-popularMovies"></div>
+
+</div>
+
+
+
+
+		<div class="next-page-container">
+			<button class="next-page-left-Btn next_page"><<<<</button>
+			<span class="next-page-Btn bottom-page-1">1</span>
+			<span class="next-page-Btn bottom-page-2">2</span>
+			<span class="next-page-Btn bottom-page-3">3</span>
+			<span class="next-page-Btn bottom-page-4">4</span>
+			<button class="next-page-right-Btn next_page">>>>></button>
+		</div>
+</div>
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="navbar.js"></script>
+
+
+
+
+<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+<script src="DateBase_Key.js"></script>
+<script src="login.js"></script>
+<script src="profile.js"></script>
+<script src="compare.js"></script>
+<script src="display_other_profile.js"></script>
+
+<script src="load_movies.js"></script>
+<script src="load_tv_show.js"></script>
+
+
+<script src="add_words_tv_show.js"></script>
+
+<script src="add_words_movies.js"></script>
+
+
+<script src="search.js"></script>
+
+<script src="next_page.js"></script>
+<script>
+var imagelink = "http://image.tmdb.org/t/p/w500";
+
+
+
+
+
+
+
+
+
+function add3Dots(string)
+{
+  var dots = "...";
+  if(string.length > 24)
+  {
+    string = string.substring(0,24) + dots;
+  }
+    return string;
+}
+
+function getYear(string)
+{
+    return string.substring(0, 4);
+}
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
